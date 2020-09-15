@@ -246,13 +246,14 @@ span.bold-text {
 }
 #overlays .gallery img, #panels .gallery img, .artwork .gallery img {
   height: auto;
-  box-shadow: grey 5px 5px 10px;
-  transition: filter 0.5s;
+  background-color: rgba(0, 0, 0, 0);
+  filter: drop-shadow(5px 5px 5px #222);
+  transition: filter 0.25s;
   cursor: pointer;
   user-select: none;
 }
 #overlays .gallery img:hover, #panels .gallery img:hover, .artwork .gallery img:hover {
-  filter: brightness(125%);
+  filter: drop-shadow(2px 2px 2px #222) brightness(125%);
 }
 
 #overlays img:nth-child(3), #overlays img:nth-child(4) {

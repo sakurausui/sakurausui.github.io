@@ -225,12 +225,13 @@ span.bold-text {
         justify-content: space-between;
         img {
             height: auto;
-            box-shadow: grey 5px 5px 10px;
-            transition: filter 0.5s;
+            background-color: rgba(0,0,0,0);
+            filter: drop-shadow(5px 5px 5px #222);
+            transition: filter 0.25s;
             cursor: pointer;
             user-select: none;
             &:hover {
-                filter: brightness(125%);
+                filter: drop-shadow(2px 2px 2px #222) brightness(125%);
             }
         }
     }
