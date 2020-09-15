@@ -90,6 +90,7 @@ span.bold-text {
   position: sticky;
   top: 0;
   left: 0;
+  z-index: 10;
 }
 @media (max-width: 650px) {
   .nav {
