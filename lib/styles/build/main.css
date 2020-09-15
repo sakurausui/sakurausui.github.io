@@ -87,6 +87,14 @@ span.bold-text {
 .nav {
   margin-top: 100vh;
   background-color: black;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+@media (max-width: 650px) {
+  .nav {
+    height: 10px;
+  }
 }
 .nav div {
   display: flex;
@@ -104,7 +112,7 @@ span.bold-text {
     display: none;
   }
 }
-.nav div a {
+.nav div * {
   flex: 1;
   padding: 10px 0;
   text-decoration: none;
@@ -114,16 +122,16 @@ span.bold-text {
   transition: background-color 0.5s;
 }
 @media (max-width: 600px) {
-  .nav div a {
+  .nav div * {
     font-size: 21.6px;
   }
 }
 @media (max-width: 450px) {
-  .nav div a {
+  .nav div * {
     font-size: 19.44px;
   }
 }
-.nav div a:hover {
+.nav div *:hover {
   background-color: #E7E7E7;
   color: black;
 }
@@ -132,15 +140,9 @@ span.bold-text {
   background-color: #FFEAEC;
 }
 
-@media (max-width: 650px) {
-  #about {
-    padding-top: 40px;
-    border-top: 10px solid black;
-  }
-}
 #about, #overlays, #panels, #commission, #contact, .artwork {
   background-color: #FFEAEC;
-  margin: 40px 0;
+  padding-top: 40px;
 }
 #about .content, #overlays .content, #panels .content, #commission .content, #contact .content, .artwork .content {
   width: 1000px;
@@ -226,8 +228,8 @@ span.bold-text {
   margin-right: 10px;
 }
 
-#commission, .artwork {
-  padding: 40px 0;
+#panels, #commission, #contact, .artwork {
+  padding-bottom: 40px;
 }
 
 .artwork {
@@ -243,7 +245,6 @@ span.bold-text {
 }
 #overlays .gallery img, #panels .gallery img, .artwork .gallery img {
   height: auto;
-  margin-bottom: 20px;
   box-shadow: grey 5px 5px 10px;
   transition: filter 0.5s;
   cursor: pointer;
@@ -259,10 +260,12 @@ span.bold-text {
 
 .artwork img {
   width: calc(25% - 5px);
+  margin-bottom: 0px;
 }
 
 #overlays img, #panels img {
   width: calc(50% - 10px);
+  margin-bottom: 20px;
 }
 
 @media (max-width: 600px) {
@@ -272,6 +275,9 @@ span.bold-text {
 
   .artwork img {
     width: calc(50% - 10px);
+  }
+  .artwork img:nth-child(1), .artwork img:nth-child(2) {
+    margin-bottom: 20px;
   }
 
   #overlays img:nth-child(3) {
